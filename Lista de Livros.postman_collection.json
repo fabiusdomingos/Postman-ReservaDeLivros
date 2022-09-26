@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "f1b0daad-adff-4d88-90f1-e07b46574e7d",
+		"name": "Lista de Livros",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10027165"
+	},
+	"item": [
+		{
+			"name": "Retorna todos os livros",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlBase}}/books",
+					"host": [
+						"{{urlBase}}"
+					],
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retorna livro específico",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlBase}}/books/:bookId",
+					"host": [
+						"{{urlBase}}"
+					],
+					"path": [
+						"books",
+						":bookId"
+					],
+					"query": [
+						{
+							"key": ":bookId",
+							"value": "2",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "bookId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retorna todos os livros do tipo \"fiction\"",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlBase}}/books?type=fiction",
+					"host": [
+						"{{urlBase}}"
+					],
+					"path": [
+						"books"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "fiction"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
