@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "1fc2ac8e-03b3-480e-a9ae-6cb670db6efe",
+		"name": "Reserva de Livros",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10027165"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "8e0514e6c04c483569df9e7fbe46928d9b30a6a8b5b67ae20aa047a728c4623d",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"clientName\": \"Gil do Vigor\",\r\n   \"clientEmail\": \"gilv@dovigor.com\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{urlBase}}/api-clients",
+					"host": [
+						"{{urlBase}}"
+					],
+					"path": [
+						"api-clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reserva um livro",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "8e0514e6c04c483569df9e7fbe46928d9b30a6a8b5b67ae20aa047a728c4623d",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"bookId\": 1,\r\n  \"customerName\": \"Gil do Vigor\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{urlBase}}/Orders",
+					"host": [
+						"{{urlBase}}"
+					],
+					"path": [
+						"Orders"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
